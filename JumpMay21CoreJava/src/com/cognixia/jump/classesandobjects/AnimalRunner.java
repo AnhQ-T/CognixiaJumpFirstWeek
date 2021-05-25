@@ -11,11 +11,11 @@ public class AnimalRunner {
 		
 		int x = 4;
 		
-		anim1.type = "Mammal";
+		anim1.setType("Mammal");
 		
-		System.out.println(anim2.weight);
+		System.out.println(anim1.getType());
 		
-		anim1.sound();
+		anim1.sound("bark");
 		
 	}
 
