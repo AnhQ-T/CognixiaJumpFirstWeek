@@ -16,6 +16,7 @@ public class AnimalRunner {
 		System.out.println(anim1.getType());
 		
 		anim1.sound("bark");
+		anim1.toString();
 		
 	}
 

@@ -28,4 +28,13 @@ public class Animal {
 		return this.type;
 	}
 	
+	public void	setWeight(double weight) {
+		this.weight = weight;
+	}
+
+	@Override
+	public String toString() {
+		return "Animal [weight=" + weight + ", type=" + type + "]";
+	}
+	
 }
