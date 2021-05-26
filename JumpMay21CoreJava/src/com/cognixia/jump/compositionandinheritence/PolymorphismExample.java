@@ -23,6 +23,15 @@ public class PolymorphismExample {
 		
 		// can't access methods that aren't already defined in Person
 		// nikita.setGpa(3.8);
+		
+//		leul.finalMethod();
+//		nikita.finalMethod();
+		
+		leul.hello();
+		leul.hello("Orquida");
+		
+		leul.add(3, 4);
+		leul.add(3.4, 4.2);
 	}
 	
 }
