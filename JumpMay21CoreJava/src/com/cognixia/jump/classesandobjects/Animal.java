@@ -1,39 +1,61 @@
+// labeling and getting the tools in my workspace to do the job
 package com.cognixia.jump.classesandobjects;
 
+// POJO - plain old java object
 public class Animal {
 	
+	// attributes
 	private double weight;
 	private String type;
+	protected static int count = 0;
 	
-	Animal() {
-		weight = 0;
-		type = "";
+
+	protected Animal(){
+		this.weight = 0;
+		this.type = "";
+		this.count++;
 	}
 	
-	Animal(double weight, String type) {
+	// overloaded constructor
+	protected Animal(double weight, String type){
 		this.weight = weight;
 		this.type = type;
+		this.count++;
 	}
 	
+	// methods
 	void sound(String input) {
-		System.out.println("Your animal sound is: " + input);
+		System.out.println("Your animal sounds like: " + input);
 	}
 	
-	void setType(String type) {
+	// Methods special section - Getters and Setters
+	public void setType(String type) {
 		this.type = type;
 	}
 	
-	String getType() {
+	public String getType() {
 		return this.type;
 	}
 	
-	public void	setWeight(double weight) {
+	public double getWeight() {
+		return weight;
+	}
+
+	public void setWeight(double weight) {
 		this.weight = weight;
+	}
+
+	public static int getCount() {
+		return count;
+	}
+	
+	public static void printTotalAnimals() {
+		System.out.println(count);
 	}
 
 	@Override
 	public String toString() {
-		return "Animal [weight=" + weight + ", type=" + type + "]";
+		return "This Animal has weight=" + weight + ", and type=" + type;
 	}
-	
+		
 }
