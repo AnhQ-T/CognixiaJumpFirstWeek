@@ -18,6 +18,12 @@ public class AnimalRunner {
 		anim1.sound("bark");
 		System.out.println(anim1.toString());
 		
+		Dog myDog1 = new Dog();
+		myDog1.setType("Lab");
+		
+		Dog myDog2 = new Dog(50.0, "mammal", "brown", "Lab", true);
+		System.out.println(myDog2);
+		
 	}
 
 }

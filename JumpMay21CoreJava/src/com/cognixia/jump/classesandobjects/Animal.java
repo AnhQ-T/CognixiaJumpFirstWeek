@@ -3,7 +3,6 @@ package com.cognixia.jump.classesandobjects;
 public class Animal {
 	
 	private double weight;
-	
 	private String type;
 	
 	Animal() {
