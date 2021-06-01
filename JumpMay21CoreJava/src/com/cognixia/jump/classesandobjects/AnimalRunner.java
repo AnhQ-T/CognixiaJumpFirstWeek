@@ -26,10 +26,6 @@ public class AnimalRunner {
 		myDog1.setType("Lab");
 		
 		Animal.printTotalAnimals();
-
-		Dog dogwithCollar = new Dog(25.0, "Dog", "Black", "Dixen", true, false);
-		
-		System.out.println(dogwithCollar);
 	}
 
 }
