@@ -1,12 +1,16 @@
 package com.cognixia.jump.interfacesandabstract;
 
-public class Amphibian implements WaterBased, Landbased {
+public class Amphibian extends Animal implements WaterBased, Landbased {
+	
+	public void makeSound() {
+		System.out.println("A sound is made	");
+	}
 
 	@Override
-	public void move() {
+	public void printWeight(double weight) {
 		
-		System.out.println("Swim or walk");
-			
+		System.out.println("Your animal weight is " + weight);
+		
 	}
 
 }

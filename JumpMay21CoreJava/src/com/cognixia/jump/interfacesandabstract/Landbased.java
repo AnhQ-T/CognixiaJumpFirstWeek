@@ -2,10 +2,16 @@ package com.cognixia.jump.interfacesandabstract;
 
 public interface Landbased {
 	
-	default void move() {
+	void makeSound();
+	
+	default String move(String input) {
 		
-		System.out.println("Walking.");
+		return ("Your animal moves");
 		
+	}
+	
+	static void printTerrain() {
+		System.out.println("This is landbased");
 	}
 	
 }

@@ -8,6 +8,13 @@ public class InterfacesRunner {
 		
 		amph.move();
 		
+		amph.makeSound();
+		
+		amph.printType("Whale");
+		
+		amph.printWeight(50.0);
+		
+		Landbased.printTerrain();
 	}
 
 }
