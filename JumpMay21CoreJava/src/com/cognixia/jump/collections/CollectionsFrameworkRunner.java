@@ -46,9 +46,9 @@ public class CollectionsFrameworkRunner {
 			
 			String[] strings = {"Cats", "Dogs", "Whales", "Elephants"};
 			
-			List<String> stringList = Arrays.asList(strings);
+			List<String> stringList = new ArrayList<>(Arrays.asList(strings));
 			
-//			stringList.add(3, "Spiders");
+			stringList.add(3, "Spiders");
 			
 			System.out.println(stringList);
 			
@@ -102,7 +102,7 @@ public class CollectionsFrameworkRunner {
 			List<WaterBased> waterList = new ArrayList<>();
 			
 			
-		// Map
+		// Map	
 		
 			// HashMap
 			Map<String, Integer> coinMap = new HashMap<>();
@@ -117,9 +117,26 @@ public class CollectionsFrameworkRunner {
 			System.out.println(coinMap.get("Nickle"));
 			System.out.println(coinMap.keySet());
 			
-			HashSet<String> mapKeySet = (HashSet<String>) coinMap.keySet();
-		
+			Set<String> mapKeySet = coinMap.keySet();
+			
 			// Iterate through a map
+			Iterator<String> mapIter = mapKeySet.iterator();
+			
+			System.out.println("Printing mapped values: ");
+			while(mapIter.hasNext()) {
+				System.out.println(coinMap.get(mapIter.next()));
+			}
+			
+			for(String s : coinMap.keySet()) {
+				System.out.println(s);
+			}
+			
+			// another way to loop and get map values
+			System.out.println("Printing through map using Entry set\n");
+			for(Map.Entry<String, Integer> entry: coinMap.entrySet()) {
+				System.out.println("Key = " + entry.getKey());
+				System.out.println("Value = " + entry.getValue());
+			}
 	}
 
 }
