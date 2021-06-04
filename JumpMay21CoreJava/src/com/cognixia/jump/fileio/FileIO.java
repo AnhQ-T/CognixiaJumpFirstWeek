@@ -1,10 +1,13 @@
 package com.cognixia.jump.fileio;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 
 public class FileIO {
 
@@ -51,8 +54,10 @@ public class FileIO {
 		}
 		
 		// Read a file
+		String s1 = "\nThis is the new file text\nThis is a new line";
 		
 		try {
+			writeFile(3, s1);
 			readFile();
 		} catch(FileNotFoundException e) {
 			System.out.println("Could not find file");
@@ -85,4 +90,54 @@ public class FileIO {
 		reader.close();
 	}
 
+	public static void writeFile(int choice, String text) throws Exception {
+		File file = new File("resources/temp.txt");
+		
+		FileWriter fileWriter = new FileWriter(file);
+		BufferedWriter buffWriter = new BufferedWriter(fileWriter);
+		PrintWriter printWriter = new PrintWriter(buffWriter);
+		
+		switch(choice) {
+		
+			case 1: 
+				writeWithBuffer(buffWriter, text);
+				break;
+			
+			case 2: 
+				appendToFile(buffWriter, text);
+				break;
+			
+			case 3: 
+				writeUsingPrintWriter(printWriter, text);
+				break;
+			
+			default: 
+				System.out.println("Not a valid option");
+		}
+		
+		printWriter.close();
+		buffWriter.close();
+		fileWriter.close();
+	}
+	
+	public static void writeWithBuffer(BufferedWriter writer, String str) throws IOException, Exception {
+		for(int i = 0; i < 3; i++) {
+			writer.write(str);
+		}
+	}
+	
+	public static void appendToFile(BufferedWriter writer, String str) throws IOException, Exception {
+		for(int i = 0; i < 3; i++) {
+			writer.append(str);
+		}
+	}
+	
+	public static void writeUsingPrintWriter(PrintWriter writer, String str) throws IOException, Exception {
+		writer.println();
+		writer.print(str);
+		writer.print(str);
+		writer.println(str);
+		writer.println(str);
+	}
+	
 }

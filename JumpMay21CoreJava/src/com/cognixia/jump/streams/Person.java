@@ -1,5 +1,7 @@
 package com.cognixia.jump.streams;
 
+import java.io.Serializable;
+
 /**
  * Class Purpose - utility class (no main method)
  * 		used to stream Employees and the attributes that describe an Employee object
@@ -9,7 +11,7 @@ package com.cognixia.jump.streams;
  * Can file / code to class, no need to live code.
  */
 
-public class Person {
+public class Person implements Serializable {
 
 	// attributes -> make getters and setters as well, and .toString()
 	private String name;
