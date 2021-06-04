@@ -1,0 +1,3 @@
+This is temp.txt
+We are testing the contents to be read by a file reader.
+On date = 6/4/21	
