@@ -20,6 +20,7 @@ public class StudentGrades {
 		highestGrade(studentMap);
 		secondHighestScoring(studentMap);
 		medianScore(studentMap);
+		averageScore(studentMap);
 	}
 	
 	public static Map highestGrade(Map<String, Integer> input) {
@@ -76,10 +77,24 @@ public class StudentGrades {
 		}
 		
 		else {
-			double median = (scoreList.get( scoreList.get(scoreList.size() / 2) + scoreList.get(scoreList.size() / 2 - 1) 	)) / 2;
+			double median = (scoreList.get( scoreList.get(scoreList.size() / 2) + scoreList.get(scoreList.size() / 2 - 1) ));
 			return median;
 		}
 	
+	}
+	
+	public static double averageScore(Map<String, Integer> input) {
+		double averageScore = 0.0;
+	
+		for (int score : input.values()) {
+			averageScore += score;
+		}
+		
+		averageScore = averageScore / input.size();
+		
+		System.out.println("The average score is " + averageScore);
+		return averageScore;
+		
 	}
 
 }
