@@ -37,7 +37,6 @@ public class ObjectStreams {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
 	}
 	
 	public static void readObjectToFile(File file) {
